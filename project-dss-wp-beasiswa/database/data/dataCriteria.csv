@@ -1,5 +1,5 @@
-﻿nama_kriteria,tipe_kriteria,bobot_kriteria
-Jumlah murid SMA/sederajat,keuntungan,5
-Jumlah mahasiswa perguruan tinggi,keuntungan,2
-Jumlah pemilik ijazah SMA/sederajat,keuntungan,3
-Jumlah pemilik ijazah perguruan tinggi/sederajat,biaya,3
+﻿nama,tipe,bobot
+Jumlah murid SMA/sederajat,keuntungan,5.00
+Jumlah mahasiswa perguruan tinggi,keuntungan,2.00
+Jumlah pemilik ijazah SMA/sederajat,keuntungan,3.00
+Jumlah pemilik ijazah perguruan tinggi/sederajat,biaya,3.00

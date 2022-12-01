@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('alternatives', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_alternatif');
-            $table->float('bobot_kriteria_1', 5, 3);
-            $table->float('bobot_kriteria_2', 5, 3);
-            $table->float('bobot_kriteria_3', 5, 3);
-            $table->float('bobot_kriteria_4', 5, 3);
+            $table->string('nama');
+            $table->integer('bobot_k1');
+            $table->integer('bobot_k2');
+            $table->integer('bobot_k3');
+            $table->integer('bobot_k4');
             $table->timestamps();
         });
     }

@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projek Decision Support System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('/css/indexStyle.css') }}">
@@ -38,9 +40,9 @@
 
                                     <div class="row align-items-center justify-content-center text-center mt-5">
                                         <div class="col align-items-center justify-content-center">
-                                            <a href="">
+                                            <a href="{{ route('dashboard') }}">
                                                 <button class="btn btn-primary btn-index text-index">
-                                                    Start Program
+                                                    Go to Dashboard
                                                 </button>
                                             </a>
                                         </div>

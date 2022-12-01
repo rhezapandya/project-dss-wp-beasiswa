@@ -9,10 +9,10 @@ class Alternative extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'nama_alternatif',
-        'bobot_kriteria_1',
-        'bobot_kriteria_2',
-        'bobot_kriteria_3',
-        'bobot_kriteria_4',
+        'nama',
+        'bobot_k1',
+        'bobot_k2',
+        'bobot_k3',
+        'bobot_k4',
     ];
 }
