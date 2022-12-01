@@ -87,17 +87,98 @@
                                 $total = array_sum($b1);
                                 foreach ($b1 as $hasil) { ?>
                                     <td class="p-1">
-                                        <?php echo round(($hasil / $total), 5); ?>
+                                        <?php echo round(($hasil / $total), 10); ?>
                                     </td>
                                 <?php } ?>
                             </tr>
                             <tr>
                                 <td class="p-1">Perbaikan Pangkat</td>
-                                <td class="p-1"></td>
-                                <td class="p-1"></td>
-                                <td class="p-1"></td>
-                                <td class="p-1"></td>
+                                <?php
+                                foreach ($data_criteria as $datum) {
+                                    if ($datum['tipe'] == 'biaya') {
+                                        $b2[] = -$datum['bobot'];
+                                    } else {
+                                        $b2[] = $datum['bobot'];
+                                    }
+                                }
+                                foreach ($b2 as $hasil) { ?>
+                                    <td class="p-1">
+                                        <?php echo round(($hasil / $total), 10); ?>
+                                    </td>
+                                <?php } ?>
                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex mt-3 mb-5 justify-content-center align-items-center">
+            <div class="col-10 d-flex align-items-center">
+                <div class="row justify-content-center">
+                    <h1 class="text-justify mb-3">Step 2 : </h1>
+                    <table class="text-justify table table-bordered" style="border:black">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col" colspan="5">Nilai Vektor S</th>
+                                <th scope="col">Hasil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $arrayv; ?>
+                            @foreach ($data_alternative as $datum)
+                            <tr>
+                                <td class="p-1">{{ $datum->nama }}</td>
+                                <td class="p-1"><?php $h1 = round(($datum->bobot_k1 ** ($b2[0] / $total)), 10);
+                                                echo $h1 ?></td>
+                                <td class="p-1"><?php $h2 = round(($datum->bobot_k2 ** ($b2[1] / $total)), 10);
+                                                echo $h2 ?></td>
+                                <td class="p-1"><?php $h3 = round(($datum->bobot_k3 ** ($b2[2] / $total)), 10);
+                                                echo $h3 ?></td>
+                                <td class="p-1"><?php $h4 = round(($datum->bobot_k4 ** ($b2[3] / $total)), 10);
+                                                echo $h4 ?></td>
+                                <td class="p-1"><?php $htotal = round(($h1 * $h2 * $h3 * $h4), 10);
+                                                echo $htotal;
+                                                $arrayv[] = $htotal;
+                                                $oldarray = array_sum($arrayv);
+                                                // $newarray = array_merge($newarray, $oldarray);
+                                                // vard($newarray);
+                                                ?></td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex mt-3 mb-5 justify-content-center align-items-center">
+            <div class="col-10 d-flex align-items-center">
+                <div class="row justify-content-center">
+                    <h1 class="text-justify mb-3">Step 3 : </h1>
+                    <table class="text-justify table table-bordered" style="border:black">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col" colspan="2">Nilai Vektor V</th>
+                                <th scope="col">Rank</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php for ($i = 0; $i < 12; $i++) { ?>
+                                <tr>
+                                    <td class="p-1"><?php print_r($data_alternative[$i]->nama) ?></td>
+                                    <td class="p-1">
+                                        <?php
+                                        print_r($arrayv[$i] / $oldarray);
+                                        $newarray = array();
+                                        $newarray[] = $arrayv[$i] / $oldarray;
+                                        ?>
+                                    </td>
+                                    <td class="p-1">
+                                        <?php
+                                        // print_r($newarray);
+                                        ?>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
