@@ -24,6 +24,11 @@ class IndexController extends Controller
         ]);
     }
 
+    public function visitMetode()
+    {
+        return view('metode');
+    }
+
     public function kalkulasi()
     {
         $data_c = Criteria::all();

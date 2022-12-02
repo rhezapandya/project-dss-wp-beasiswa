@@ -13,7 +13,10 @@
     <div class="container-fluid mt-5 mb-5">
         <h1 class="text-center">Data Dashboard</h1>
         <!-- <h2 class="text-center">Pemerintah Sumedang</h2> -->
-        <h4 class="text-center mt-5">Pemberian Beasiswa S1 terhadap Pelajar SMA di Jatinangor</h4>
+        <h4 class="text-center mt-5" style="line-height:2rem">Aplikasi Sistem Pendukung Keputusan Pemberian Beasiswa S1 terhadap<br> Pelajar SMA di Jatinangor Menggunakan Metode Weighted Product (WP)</h4>
+        <p class="text-center mt-3" style="font-size:1.2rem;">
+            Sumber data : Open Data Kabupaten Sumedang. Dapat diakses <a href="https://opendata.sumedangkab.go.id/index.php/Dashboard" target="_blank">disini</a>
+        </p>
         <div class="row d-flex mt-5 mb-3 justify-content-center align-items-center">
             <div class="col-8 d-flex justify-content-center align-items-center">
                 <table class="table table-bordered" style="border:black">
@@ -70,6 +73,13 @@
                 <a href="{{ route('index') }}">
                     <button class="btn btn-danger btn-index text-index">
                         Back to Home
+                    </button>
+                </a>
+            </div>
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <a href="{{ route('metode') }}">
+                    <button class="btn btn-info btn-index text-index">
+                        Info Metode
                     </button>
                 </a>
             </div>

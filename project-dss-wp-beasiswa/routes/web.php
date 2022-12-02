@@ -20,4 +20,5 @@ use App\Http\Controllers\IndexController;
 
 Route::get('/', [IndexController::class, 'visitIndex'])->name('index');
 Route::get('/dashboard', [IndexController::class, 'visitDashboard'])->name('dashboard');
+Route::get('/metode', [IndexController::class, 'visitMetode'])->name('metode');
 Route::get('/kalkulasi', [IndexController::class, 'kalkulasi'])->name('perhitungan');

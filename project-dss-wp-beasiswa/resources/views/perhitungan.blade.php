@@ -18,11 +18,11 @@
                 <table class="table table-bordered" style="border:black">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">Alternatif</th>
-                            <th scope="col">K1</th>
-                            <th scope="col">K2</th>
-                            <th scope="col">K3</th>
-                            <th scope="col">K4</th>
+                            <th class="text-center" scope="col">Alternatif</th>
+                            <th class="text-center" scope="col">K1</th>
+                            <th class="text-center" scope="col">K2</th>
+                            <th class="text-center" scope="col">K3</th>
+                            <th class="text-center" scope="col">K4</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,10 +44,10 @@
                     <table class="text-justify table table-bordered" style="border:black">
                         <thead class="table-dark">
                             <tr>
-                                <th scope="col">ID Kriteria</th>
-                                <th scope="col">Nama Kriteria</th>
-                                <th scope="col">Tipe Kriteria</th>
-                                <th scope="col">Bobot Kriteria</th>
+                                <th class="text-center" scope="col">ID Kriteria</th>
+                                <th class="text-center" scope="col">Nama Kriteria</th>
+                                <th class="text-center" scope="col">Tipe Kriteria</th>
+                                <th class="text-center" scope="col">Bobot Kriteria</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -67,13 +67,13 @@
         <div class="row d-flex mt-3 mb-5 justify-content-center align-items-center">
             <div class="col-10 d-flex align-items-center">
                 <div class="row justify-content-center">
-                    <h1 class="text-justify mb-3">Step 1 : </h1>
+                    <h2 class="text-justify mb-3">Step 1 : Melakukan perbaikan Bobot dan Pangkat (sesuai dengan tipe)</h2>
                     <table class="text-justify table table-bordered" style="border:black">
                         <thead class="table-dark">
                             <tr>
-                                <th scope="col">Bobot</th>
+                                <th class="text-center" scope="col">Bobot</th>
                                 @foreach ($data_criteria as $datum)
-                                <th scope="col">{{ $datum->bobot }}</th>
+                                <th class="text-center" scope="col">{{ $datum->bobot }}</th>
                                 @endforeach
                             </tr>
                         </thead>
@@ -115,12 +115,12 @@
         <div class="row d-flex mt-3 mb-5 justify-content-center align-items-center">
             <div class="col-10 d-flex align-items-center">
                 <div class="row justify-content-center">
-                    <h1 class="text-justify mb-3">Step 2 : </h1>
+                    <h2 class="text-justify mb-3">Step 2 : Menghitung Vektor S</h2>
                     <table class="text-justify table table-bordered" style="border:black">
                         <thead class="table-dark">
                             <tr>
-                                <th scope="col" colspan="5">Nilai Vektor S</th>
-                                <th scope="col">Hasil</th>
+                                <th class="text-center" scope="col" colspan="5">Nilai Vektor S</th>
+                                <th class="text-center" scope="col">Hasil</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -153,28 +153,24 @@
         <div class="row d-flex mt-3 mb-5 justify-content-center align-items-center">
             <div class="col-10 d-flex align-items-center">
                 <div class="row justify-content-center">
-                    <h1 class="text-justify mb-3">Step 3 : </h1>
+                    <h2 class="text-justify mb-3">Step 3 : Menghitung Vektor V</h2>
                     <table class="text-justify table table-bordered" style="border:black">
                         <thead class="table-dark">
                             <tr>
-                                <th scope="col" colspan="2">Nilai Vektor V</th>
-                                <th scope="col">Rank</th>
+                                <th class="text-center" scope="col">Vektor</th>
+                                <th class="text-center" scope="col" colspan="2">Nilai Vektor V</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php for ($i = 0; $i < 12; $i++) { ?>
                                 <tr>
+                                    <td class="p-1">V<?php echo $i + 1; ?></td>
                                     <td class="p-1"><?php print_r($data_alternative[$i]->nama) ?></td>
                                     <td class="p-1">
                                         <?php
                                         print_r($arrayv[$i] / $oldarray);
                                         $newarray = array();
                                         $newarray[] = $arrayv[$i] / $oldarray;
-                                        ?>
-                                    </td>
-                                    <td class="p-1">
-                                        <?php
-                                        // print_r($newarray);
                                         ?>
                                     </td>
                                 </tr>
@@ -185,17 +181,24 @@
             </div>
         </div>
         <div class="row d-flex mt-3 mb-5 justify-content-center align-items-center">
-            <div class="col-2 d-flex justify-content-center align-items-center">
-                <a href="{{ route('index') }}">
-                    <button class="btn btn-danger btn-index text-index">
-                        Back to Home
-                    </button>
-                </a>
+            <div class="col-10 d-flex align-items-center">
+                <div class="row justify-content-center">
+                    <h2 class="text-justify mb-3">Step 4 : Kesimpulan</h2>
+                    <p class="text-justify" style="font-size:1.3rem">
+                        Nilai terbesar ada pada V8 sehingga alternatif A8 (Desa Hegarmanah)
+                        adalah alternatif yang terpilih sebagai alternatif
+                        terbaik.<br>
+                        Dengan kata lain, Desa Hegarmanah akan <span style="font-weight:bold">terpilih</span> sebagai lokasi
+                        untuk Pemberian Beasiswa S1 terhadap Pelajar SMA di Jatinangor.
+                    </p>
+                </div>
             </div>
+        </div>
+        <div class="row d-flex mt-3 mb-5 justify-content-center align-items-center">
             <div class="col-2 d-flex justify-content-center align-items-center">
-                <a href="{{ route('index') }}">
-                    <button class="btn btn-primary btn-index text-index">
-                        Start Program
+                <a href="{{ route('dashboard') }}">
+                    <button class="btn btn-danger btn-index text-index">
+                        Back to Dashboard
                     </button>
                 </a>
             </div>
