@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Alternative extends Model
 {
-    use HasFactory;
+    use HasFactory; # Model Code
+    # Set Field pada tabel Alternative yang bisa dimasukkan data
     protected $fillable = [
         'nama',
         'bobot_k1',

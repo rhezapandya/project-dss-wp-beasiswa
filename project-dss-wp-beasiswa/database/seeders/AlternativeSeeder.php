@@ -15,24 +15,7 @@ class AlternativeSeeder extends Seeder
      */
     public function run()
     {
-        // Alternative::truncate();
-        // $heading = true;
-        // $input_file = fopen(base_path("database/data/dataalternative.csv"), "r");
-        // while (($record = fgetcsv($input_file, 13, ",")) !== FALSE) {
-        //     if (!$heading) {
-        //         $product = array(
-        //             "nama" => $record['0'],
-        //             "bobot_k1" => $record['1'],
-        //             "bobot_k2" => $record['2'],
-        //             "bobot_k3" => $record['3'],
-        //             "bobot_k4" => $record['4']
-        //         );
-        //         Alternative::create($product);
-        //     }
-        //     $heading = false;
-        // }
-        // fclose($input_file);
-
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Cibeusi',
             'bobot_k1' => 12,
@@ -41,6 +24,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 3
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Cikeruh',
             'bobot_k1' => 140,
@@ -49,6 +33,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 53
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Cilayung',
             'bobot_k1' => 954,
@@ -57,6 +42,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 136
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Cileles',
             'bobot_k1' => 1317,
@@ -65,6 +51,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 201
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Cintamulya',
             'bobot_k1' => 1669,
@@ -73,6 +60,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 258
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Cipacing',
             'bobot_k1' => 213,
@@ -81,6 +69,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 47
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Cisempur',
             'bobot_k1' => 666,
@@ -89,6 +78,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 127
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Hegarmanah',
             'bobot_k1' => 2479,
@@ -97,6 +87,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 473
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Jatimukti',
             'bobot_k1' => 1003,
@@ -105,6 +96,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 111
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Jatiroke',
             'bobot_k1' => 1117,
@@ -113,6 +105,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 60
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Mekargalih',
             'bobot_k1' => 887,
@@ -121,6 +114,7 @@ class AlternativeSeeder extends Seeder
             'bobot_k4' => 148
         ]);
 
+        # Membuat Data pada tabel Alternatives
         Alternative::create([
             'nama' => 'Sayang',
             'bobot_k1' => 2367,

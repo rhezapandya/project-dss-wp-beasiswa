@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+        # Function untuk membuat database baru dengan nama criterias dengan atribut serta tipe data yang diinginkan
         Schema::create('criterias', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
@@ -29,6 +30,7 @@ return new class extends Migration
      */
     public function down()
     {
+        # Function untuk menghapus database dengan nama criterias jika database dengan nama itu sudah ada
         Schema::dropIfExists('criterias');
     }
 };

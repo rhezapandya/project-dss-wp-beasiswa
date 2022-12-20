@@ -2,18 +2,27 @@
 <html>
 
 <head>
+    <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page Title & Icon -->
     <title>Projek Decision Support System</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="icon" href="{{ asset('/image/unpad.png') }}" type="image">
+
+    <!-- Link Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
 <body>
+    <!-- Membuat Container Box -->
     <div class="container-fluid mt-5 mb-5">
+        <!-- Teks Judul -->
         <h1 class="text-center">Metode Weighted Product (WP)</h1>
         <div class="row d-flex mt-5 mb-3 justify-content-center align-items-center">
             <div class="col-8 d-flex justify-content-center align-items-center">
+
+                <!-- Teks Deskripsi Metode -->
                 <div class="row justify-content-center align-items-center">
                     <p class="text-justify" style="font-size:1.3rem;">
                         Metode Weighted Product (WP) menggunakan
@@ -37,7 +46,9 @@
             </div>
         </div>
         <div class="row d-flex mt-3 mb-5 justify-content-center align-items-center">
+            <!-- Membuat button untuk kembali ke dashboard page -->
             <div class="col-2 d-flex justify-content-center align-items-center">
+                <!-- Untuk Routing menggunakan blade -->
                 <a href="{{ route('dashboard') }}">
                     <button class="btn btn-danger btn-index text-index">
                         Back to Dashboard

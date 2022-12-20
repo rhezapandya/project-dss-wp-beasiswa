@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+        # Function untuk membuat database baru dengan nama alternatives dengan atribut serta tipe data yang diinginkan
         Schema::create('alternatives', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
@@ -31,6 +32,7 @@ return new class extends Migration
      */
     public function down()
     {
+        # Function untuk menghapus database dengan nama alternatives jika database dengan nama itu sudah ada
         Schema::dropIfExists('alternatives');
     }
 };

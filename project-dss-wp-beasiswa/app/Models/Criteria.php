@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Criteria extends Model
 {
-    use HasFactory;
+    use HasFactory; # Model Code
+    # Set Field pada tabel Criteria yang bisa dimasukkan data
     protected $fillable = [
         'nama',
         'tipe',
